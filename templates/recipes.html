@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipes List</title>
+</head>
+    <body>
+        <form>
+            <input type="text" name="search" placeholder=" Search Recipe">
+            <button type="submit">Search</button>
+        </form>
+        <h1>Recipes List</h1>
+        <a href="{{ url_for('add_recipe') }}">Add New Recipe</a>
+        <ul>
+            {% for i in meals %}
+            <li>
+                <a href="/recipe/{{ i.idMeal }}">{{ i.strMeal }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

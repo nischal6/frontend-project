@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Recipe</title>
+</head>
+<body>
+    <h1>Add New Recipe</h1>
+    <form method="post">
+        <label>Name: </label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Image URL: </label><br>
+        <input type="text" name="image"><br><br>
+
+        <label>Category: </label><br>
+        <input type="text" name="category"><br><br>
+
+        <label>Instructions: </label><br>
+        <textarea name="instructions" rows="4" cols="40"></textarea><br><br>
+
+        <label>Ingredients (comma separated): </label><br>
+        <input type="text" name="ingredients"><br><br>
+    
+        <button type="submit">Add Recipe</button>
+
+    </form>
+    <a href="{{ url_for('home') }}">Back to Recipe List</a>
+
+</body>
+</html>
